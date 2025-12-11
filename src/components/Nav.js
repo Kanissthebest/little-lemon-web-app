@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <nav>
@@ -8,10 +9,10 @@ function Nav() {
         listStyle: 'none'
 
       }}>
-        <li>Home</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/booking">Booking</Link></li>
         <li>About</li>
         <li>Menu</li>
-        <li>Reservation</li>
         <li>Order Online</li>
         <li>Login</li>
       </ul>

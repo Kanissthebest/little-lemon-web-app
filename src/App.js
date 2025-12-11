@@ -1,4 +1,6 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Booking from './components/Booking';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
@@ -10,7 +12,10 @@ function App() {
       <Header />
       <Nav />
     </header>
-      <Main />
+    <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/booking" element={<Booking />} />
+      </Routes>
       <Footer />
     </>
   );
