@@ -7,7 +7,7 @@ function HeroSection(){
           <h1 style={{color:'#F4CE14', margin:'0', fontWeight:'medium', fontSize:'64pt'}}>Little lemon</h1>
           <h2 style={{margin:'0', fontSize:'40pt'}}>Chicago</h2>
           <p style={{width:'35%', minWidth:'200px'}}>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <button style={{backgroundColor:'#F4CE14',fontWeight:'bolder', border:'none', borderRadius:'8px', padding:'10px 20px', cursor:'pointer'}}>
+          <button style={{backgroundColor:'#F4CE14',fontWeight:'bolder', border:'none', borderRadius:'8px', padding:'10px 20px', cursor:'pointer'}} aria-label="On Click">
             Reserve a Table
             </button>
         </section>

@@ -28,7 +28,7 @@ function Highlights() {
         <section style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'nowrap'}}>
            <h1 style={{marginTop:'40px', gridArea:'title', textAlign:'left',justifyItems:'flex-start'}}>This weeks specials!</h1>
            <button style={{backgroundColor:'#F4CE14', gridArea:'button', fontWeight:'bolder', border:'none',
-           borderRadius:'8px', padding:'10px 20px', cursor:'pointer',justifyItems:'flex-end'}}>
+           borderRadius:'8px', padding:'10px 20px', cursor:'pointer',justifyItems:'flex-end'}} aria-label="On Click">
           Online Menu
         </button>
         </section>
@@ -36,14 +36,12 @@ function Highlights() {
           {dishes.map((dish, index) => (
             <article key={index} style={{width:'100%', backgroundColor:'#EDEFEE', borderRadius:'15px', paddingBottom:'10px', boxShadow:'0px 4px 6px rgba(0, 0, 0, 0.2)'}}>
               <img src={dish.image} alt={dish.name} style={{width:'100%', borderRadius:'15px'}} />
-              <p style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'nowrap', margin:'0 10px'}} >
+              <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'nowrap', margin:'0 10px'}} >
                 <h3>{dish.name}</h3>
                 <h4 style={{color:'#EE9972'}}>{dish.price}</h4>
-              </p>
+              </div>
               <p style={{margin:'10px'}}>{dish.description}</p>
-              <p style={{margin:'10px'}}>
-                order a delivery
-              </p>
+              <button style={{margin:'10px'}} aria-label="On Click">Order a delivery</button>
             </article>
           ))}
       </section>

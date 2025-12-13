@@ -6,6 +6,9 @@ function BookingForm({ formData, onFormChange, onSubmit }) {
     const { availableTimes, dispatch } = useContext(BookingTimesContext);
     const bookingOccasionList = ["Birthday", "Anniversary", "Engagement", "Other"];
 
+    // Get today's date in YYYY-MM-DD format for min attribute
+    const today = new Date().toISOString().split('T')[0];
+
     const handleDateChange = (e) => {
         const newDate = e.target.value;
         onFormChange('date', newDate);
@@ -22,6 +25,18 @@ function BookingForm({ formData, onFormChange, onSubmit }) {
         }
     };
 
+    // Validation function
+    const isFormValid = () => {
+        return (
+            formData.date &&
+            formData.date >= today &&
+            formData.time &&
+            formData.guests >= 1 &&
+            formData.guests <= 10 &&
+            formData.occasion
+        );
+    };
+
     return (
         <div className="booking-container">
             <h1>Booking options</h1>
@@ -33,6 +48,7 @@ function BookingForm({ formData, onFormChange, onSubmit }) {
                             type="date"
                             id="res-date"
                             value={formData.date}
+                            min={today}
                             onChange={handleDateChange}
                             required
                         />
@@ -78,7 +94,7 @@ function BookingForm({ formData, onFormChange, onSubmit }) {
                         </select>
                     </div>
                 </div>
-                <button type="submit">Make Your reservation</button>
+                <button type="submit" disabled={!isFormValid()} aria-label="On Click">Make Your reservation</button>
             </form>
         </div>
     );
