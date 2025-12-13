@@ -1,10 +1,11 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Booking from './components/Booking';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Main from './components/Main';
+import Main, { BookingTimesProvider } from './components/Main';
 import Footer from './components/Footer';
+import BookingPage from './components/Booking/BookingPage';
+import ConfirmedBooking from './components/Booking/ConfirmedBooking';
 function App() {
   return (
     <>
@@ -12,10 +13,13 @@ function App() {
       <Header />
       <Nav />
     </header>
-    <Routes>
+    <BookingTimesProvider>
+      <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/booking" element={<Booking />} />
+        <Route path="/bookingPage" element={<BookingPage />} />
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
       </Routes>
+    </BookingTimesProvider>
       <Footer />
     </>
   );

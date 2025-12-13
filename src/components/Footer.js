@@ -1,30 +1,51 @@
 import logo from '../assets/icons/Logo.svg'
 function Footer() {
+  const footerStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    padding: 'clamp(20px, 5vw, 150px)',
+    gap: '20px'
+  };
+
+  const articleStyle = {
+    textAlign: 'center',
+    flex: '1 1 150px',
+    minWidth: '150px'
+  };
+
+  const ulStyle = {
+    listStyle: 'none',
+    padding: 0,
+    margin: '10px 0 0 0'
+  };
+
   return (
-    <footer style={{display:'flex', flexWrap:'wrap', justifyContent:'space-around', alignItems:'center',padding:'0px 150px'}}>
-        <img src={logo} alt='little lemon logo' />
-        <article>
-            <h3 style={{textAlign:'center'}}>Other links</h3>
-            <ul style={{listStyle:'none'}}>
-                <li><a>Email</a></li>
-                <li><a>Phone number</a></li>
-                <li><a>Address</a></li>
+    <footer style={footerStyle}>
+        <img src={logo} alt='little lemon logo' style={{maxHeight: '60px', maxWidth: '100%', height: 'auto'}} />
+        <article style={articleStyle}>
+            <h3>Other links</h3>
+            <ul style={ulStyle}>
+                <li><a href="#email">Email</a></li>
+                <li><a href="#phone">Phone number</a></li>
+                <li><a href="#address">Address</a></li>
             </ul>
         </article>
-        <article>
-            <h3 style={{textAlign:'center'}}>Contact</h3>
-            <ul style={{listStyle:'none'}}>
-                <li><a>Email</a></li>
-                <li><a>Phone number</a></li>
-                <li><a>Address</a></li>
+        <article style={articleStyle}>
+            <h3>Contact</h3>
+            <ul style={ulStyle}>
+                <li><a href="#email">Email</a></li>
+                <li><a href="#phone">Phone number</a></li>
+                <li><a href="#address">Address</a></li>
             </ul>
         </article>
-        <article>
-            <h3 style={{textAlign:'center'}}>Social Media</h3>
-            <ul style={{listStyle:'none'}}>
-                <li><a>Email</a></li>
-                <li><a>Phone number</a></li>
-                <li><a>Address</a></li>
+        <article style={articleStyle}>
+            <h3>Social Media</h3>
+            <ul style={ulStyle}>
+                <li><a href="#email">Email</a></li>
+                <li><a href="#phone">Phone number</a></li>
+                <li><a href="#address">Address</a></li>
             </ul>
         </article>
     </footer>

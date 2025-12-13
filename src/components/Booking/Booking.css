@@ -41,7 +41,7 @@ label {
 
 .fullfied,
 select,
-input[type="date"] {
+input[type="date"],input[type="number"]{
   padding: 12px 14px;
   border-radius: 10px;
   border: 1px solid #ccc;

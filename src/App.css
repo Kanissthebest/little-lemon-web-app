@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Karla", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
 }
+
 h1,h2,h3 {
   font-family: "Markazi Text", serif;
 }
@@ -12,13 +17,17 @@ h1,h2,h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 150px;
+  padding: 20px clamp(20px, 5vw, 150px);
   font-weight:500;
+  flex-wrap: wrap;
+  gap: 20px;
 }
+
 p{
   font-size:16px;
   line-height: 1.5;
 }
+
 button {
   margin-top: 20px;
   padding: 14px;
@@ -34,4 +43,40 @@ button {
 button:hover {
   background-color: #e1bc05;
   transform: translateY(-1px);
+}
+
+/* ======================== */
+/* Responsive Media Queries */
+/* ======================== */
+
+/* Tablets (768px and up) */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 20px 30px;
+  }
+}
+
+/* Mobile devices (480px and up) */
+@media (max-width: 480px) {
+  .App-header {
+    padding: 15px 15px;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
