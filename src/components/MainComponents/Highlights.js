@@ -2,6 +2,8 @@
 import greekSalad from '../../assets/images/greek_salad.jpg'
 import bruchetta from '../../assets/icons/bruchetta.svg'
 import lemonDessert from '../../assets/images/lemon dessert.jpg'
+import '../main.css';
+
 function Highlights() {
     const dishes = [
     {
@@ -24,24 +26,23 @@ function Highlights() {
     },
   ];
   return (
-    <section style={{padding:'0px 150px', marginTop:'80px', marginBottom:'80px'}}>
-        <section style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'nowrap'}}>
-           <h1 style={{marginTop:'40px', gridArea:'title', textAlign:'left',justifyItems:'flex-start'}}>This weeks specials!</h1>
-           <button style={{backgroundColor:'#F4CE14', gridArea:'button', fontWeight:'bolder', border:'none',
-           borderRadius:'8px', padding:'10px 20px', cursor:'pointer',justifyItems:'flex-end'}} aria-label="On Click">
+    <section className="highlights-section">
+        <section className="highlights-header">
+           <h1 className="highlights-h1">This weeks specials!</h1>
+           <button className="highlights-button" aria-label="On Click">
           Online Menu
         </button>
         </section>
-        <section style={{display:'grid', gridTemplateColumns:"repeat(auto-fit, minmax(250px, 1fr))", alignItems:'center', marginTop:'60px', gap:'30px'}}>
+        <section className="highlights-grid">
           {dishes.map((dish, index) => (
-            <article key={index} style={{width:'100%', backgroundColor:'#EDEFEE', borderRadius:'15px', paddingBottom:'10px', boxShadow:'0px 4px 6px rgba(0, 0, 0, 0.2)'}}>
-              <img src={dish.image} alt={dish.name} style={{width:'100%', borderRadius:'15px'}} />
-              <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'nowrap', margin:'0 10px'}} >
-                <h3>{dish.name}</h3>
-                <h4 style={{color:'#EE9972'}}>{dish.price}</h4>
+            <article key={index} className="dish-article">
+              <img src={dish.image} alt={dish.name} className="dish-img" />
+              <div className="dish-header">
+                <h3 className="dish-h3">{dish.name}</h3>
+                <h4 className="dish-h4">{dish.price}</h4>
               </div>
-              <p style={{margin:'10px'}}>{dish.description}</p>
-              <button style={{margin:'10px'}} aria-label="On Click">Order a delivery</button>
+              <p className="dish-p">{dish.description}</p>
+              <button className="dish-button" aria-label="On Click">Order a delivery</button>
             </article>
           ))}
       </section>

@@ -94,7 +94,7 @@ function BookingForm({ formData, onFormChange, onSubmit }) {
                         </select>
                     </div>
                 </div>
-                <button type="submit" disabled={!isFormValid()} aria-label="On Click">Make Your reservation</button>
+                <button type="submit" disabled={!isFormValid()}>Make Your reservation</button>
             </form>
         </div>
     );

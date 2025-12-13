@@ -1,4 +1,5 @@
 import Stars from "./Stars";
+import '../main.css';
 
 function Testimonials() {
     const testimonials = [
@@ -20,15 +21,15 @@ function Testimonials() {
     },
   ];
   return (
-    <section style={{padding:'0px 150px', marginBottom:'80px', backgroundColor:'#FBDABB', paddingTop:'40px', paddingBottom:'40px'}}>
-      <h2 style={{fontSize:'48px',textAlign:'center'}}>Customers Say</h2>
-      <div style={{display:'grid', gridTemplateColumns:"repeat(auto-fit, minmax(200px, 1fr))", gap:'20px'}}>
+    <section className="testimonials-section">
+      <h2 className="testimonials-h2">Customers Say</h2>
+      <div className="testimonials-grid">
         {testimonials.map((testimonial, index) => (
-        <article key={index} style={{backgroundColor:'#EDEFEE', padding:'20px', borderRadius:'10px', boxShadow:'0px 4px 6px rgba(0, 0, 0, 0.2)'}}>
+        <article key={index} className="testimonial-article">
           <Stars rating={5} />
-          <h4>- {testimonial.name}</h4>
-          <img src={`https://i.pravatar.cc/100?img=${index + 10}`} alt={testimonial.name} style={{borderRadius:'50%'}} />
-          <p>"{testimonial.feedback}"</p>
+          <h4 className="testimonial-h4">- {testimonial.name}</h4>
+          <img src={`https://i.pravatar.cc/100?img=${index + 10}`} alt={testimonial.name} className="testimonial-img" />
+          <p className="testimonial-p">"{testimonial.feedback}"</p>
         </article>
       ))}
       </div>

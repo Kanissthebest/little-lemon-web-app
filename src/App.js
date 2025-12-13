@@ -18,6 +18,10 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/bookingPage" element={<BookingPage />} />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="/about" element={<Main />} />
+        <Route path="/menu" element={<Main />} />
+        <Route path="/order" element={<Main />} />
+        <Route path="/login" element={<Main />} />
       </Routes>
     </BookingTimesProvider>
       <Footer />

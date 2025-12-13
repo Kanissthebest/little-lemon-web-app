@@ -1,48 +1,28 @@
 import logo from '../assets/icons/Logo.svg'
+import './main.css'
 function Footer() {
-  const footerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    padding: 'clamp(20px, 5vw, 150px)',
-    gap: '20px'
-  };
-
-  const articleStyle = {
-    textAlign: 'center',
-    flex: '1 1 150px',
-    minWidth: '150px'
-  };
-
-  const ulStyle = {
-    listStyle: 'none',
-    padding: 0,
-    margin: '10px 0 0 0'
-  };
-
   return (
-    <footer style={footerStyle}>
-        <img src={logo} alt='little lemon logo' style={{maxHeight: '60px', maxWidth: '100%', height: 'auto'}} />
-        <article style={articleStyle}>
+    <footer className="footer" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center', padding: 'clamp(20px, 5vw, 150px)', gap: '20px'}}>
+        <img src={logo} alt='little lemon logo' className="footer-logo" />
+        <article className="footer-article">
             <h3>Other links</h3>
-            <ul style={ulStyle}>
+            <ul className="footer-ul">
                 <li><a href="#email">Email</a></li>
                 <li><a href="#phone">Phone number</a></li>
                 <li><a href="#address">Address</a></li>
             </ul>
         </article>
-        <article style={articleStyle}>
+        <article className="footer-article">
             <h3>Contact</h3>
-            <ul style={ulStyle}>
+            <ul className="footer-ul">
                 <li><a href="#email">Email</a></li>
                 <li><a href="#phone">Phone number</a></li>
                 <li><a href="#address">Address</a></li>
             </ul>
         </article>
-        <article style={articleStyle}>
+        <article className="footer-article">
             <h3>Social Media</h3>
-            <ul style={ulStyle}>
+            <ul className="footer-ul">
                 <li><a href="#email">Email</a></li>
                 <li><a href="#phone">Phone number</a></li>
                 <li><a href="#address">Address</a></li>
